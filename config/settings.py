@@ -77,13 +77,20 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'project5',
+        'USER': 'postgres',
+        'PASSWORD': '123098'
+    },
+
+    'Products': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Products',
         'USER': 'postgres',
         'PASSWORD': 123098
     },
 
-    'DB': {
+    'Categories': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'Categories',
         'USER': 'postgres',
