@@ -19,9 +19,7 @@ class Product(models.Model):
         return f'{self.name}: {self.about}'
 
     class Meta:
-        app_label = 'catalog'
-        db_table = 'my_table'
-        managed = False
+        verbose_name = 'Продукция'
         database = 'Product'
 
 
@@ -33,8 +31,7 @@ class Category(models.Model):
         return f'{self.name}: {self.about}'
 
     class Meta:
-        app_label = 'catalog'
-        db_table = 'my_table'
-        managed = False
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
         database = 'default'
 
