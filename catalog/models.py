@@ -18,6 +18,10 @@ class Product(models.Model):
     def __str__(self):
         return f'{self.name}: {self.about}'
 
+    class Meta:
+        verbose_name = 'Продукция'
+        database = 'Product'
+
 
 class Category(models.Model):
     name = models.CharField(max_length=300, verbose_name='наименование')
@@ -25,4 +29,9 @@ class Category(models.Model):
 
     def __str__(self):
         return f'{self.name}: {self.about}'
+
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+        database = 'default'
 
