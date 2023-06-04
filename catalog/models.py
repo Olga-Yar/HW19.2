@@ -22,7 +22,7 @@ class Product(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=150, verbose_name='наименование')
     about = models.CharField(max_length=150, verbose_name='описание')
-    created_at = models.DateTimeField(verbose_name='дата создания', default='2023-06-03')
+    # created_at = models.DateTimeField(verbose_name='дата создания', default='2023-06-03')
 
     def __str__(self):
         return f'{self.name}: {self.about}'
