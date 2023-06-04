@@ -1,10 +1,17 @@
 from django.shortcuts import render
 
+from catalog.models import Category
+
+
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'catalog/index.html')
+    category_list = Category.objects.all()
+    context = {
+        'category_list': category_list
+    }
+    return render(request, 'catalog/index.html', context)
 
 
 def contact(request):
