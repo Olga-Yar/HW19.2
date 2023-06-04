@@ -18,6 +18,12 @@ class Product(models.Model):
     def __str__(self):
         return f'{self.name}: {self.about}'
 
+    class Meta:
+        app_label = 'catalog'
+        db_table = 'my_table'
+        managed = False
+        database = 'Product'
+
 
 class Category(models.Model):
     name = models.CharField(max_length=300, verbose_name='наименование')
@@ -25,4 +31,10 @@ class Category(models.Model):
 
     def __str__(self):
         return f'{self.name}: {self.about}'
+
+    class Meta:
+        app_label = 'catalog'
+        db_table = 'my_table'
+        managed = False
+        database = 'default'
 
